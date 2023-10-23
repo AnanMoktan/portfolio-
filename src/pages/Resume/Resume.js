@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import WorkIcon from "@mui/icons-material/Work";
 import {
   Container,
@@ -23,8 +23,34 @@ import {
 import TimelineItem from "@mui/lab/TimelineItem";
 import SchoolIcon from "@mui/icons-material/School";
 import CustomButton from "../../components/Button/Button";
+import { collection, getDocs, addDoc } from "firebase/firestore";
+import { db } from "../../firebase-config";
+
+const colRef = collection(db, "Employer");
 
 const Resume = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const addEmployerForm = (e) => {
+    e.preventDefault();
+
+    // Access the values from state
+    const employerData = {
+      Name: name,
+      Email: email,
+      Message: message,
+    };
+
+    addDoc(colRef, employerData).then(() => {
+      alert("Thanks for filling out the contact form");
+      // Clear the form fields
+      setName("");
+      setEmail("");
+      setMessage("");
+    });
+  };
   return (
     <>
       {/* About me */}
@@ -174,12 +200,24 @@ const Resume = () => {
             </Grid>
 
             <Grid item xs={12}>
-              <Grid container spacing={3}>
+              <Grid className="add" container spacing={3}>
                 <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name="name" label="Name" />
+                  <TextField
+                    fullWidth
+                    name="name"
+                    label="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name="email" label="E-mail" />
+                  <TextField
+                    fullWidth
+                    name="email"
+                    label="E-mail"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -188,10 +226,12 @@ const Resume = () => {
                     label="Message"
                     multiline
                     rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <CustomButton text="submit" />
+                  <CustomButton myFunction={addEmployerForm} text="submit" />
                 </Grid>
               </Grid>
             </Grid>

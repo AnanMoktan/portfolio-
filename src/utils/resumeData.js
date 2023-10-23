@@ -140,10 +140,13 @@ export default {
       links: [
         { link: "https://www.youtube.com", icon: <YouTubeIcon /> },
         {
-          link: "https://ananmoktan.github.io/CasinoRoll/",
+          link: "https://github.com/AnanMoktan/CasinoRoll",
           icon: <GithubIcon />,
         },
-        { link: "https://www.google.com", icon: <Language /> },
+        {
+          link: "https://ananmoktan.github.io/CasinoRoll/",
+          icon: <Language />,
+        },
       ],
     },
 
@@ -157,8 +160,8 @@ export default {
       actions of their opponent`,
       links: [
         { link: "https://www.youtube.com", icon: <YouTubeIcon /> },
-        { link: "https://ananmoktan.github.io/Poker/", icon: <GithubIcon /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        { link: "https://github.com/AnanMoktan/Poker", icon: <GithubIcon /> },
+        { link: "https://ananmoktan.github.io/Poker/", icon: <Language /> },
       ],
     },
     {
@@ -171,10 +174,13 @@ export default {
       links: [
         { link: "https://www.google.com", icon: <YouTubeIcon /> },
         {
-          link: "https://ananmoktan.github.io/invitation/",
+          link: "https://github.com/AnanMoktan/invitation",
           icon: <GithubIcon />,
         },
-        { link: "https://www.google.com", icon: <Language /> },
+        {
+          link: "https://ananmoktan.github.io/invitation/",
+          icon: <Language />,
+        },
       ],
     },
   ],
