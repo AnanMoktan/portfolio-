@@ -125,7 +125,10 @@ export default {
         "Portfolio wesite made and deployed in firebase using react.",
       links: [
         { link: "https://www.youtube.com", icon: <YouTubeIcon /> },
-        { link: "https://www.google.com", icon: <GithubIcon /> },
+        {
+          link: "https://github.com/AnanMoktan/portfolio-",
+          icon: <GithubIcon />,
+        },
         { link: "https://www.google.com", icon: <Language /> },
       ],
     },
