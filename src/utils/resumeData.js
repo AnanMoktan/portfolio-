@@ -120,7 +120,7 @@ export default {
       tag: "React",
       image: resumeprj,
       title: " React project ",
-      caption: "portfoilio website",
+      caption: "portfolio website",
       description:
         "Portfolio wesite made and deployed in firebase using react.",
       links: [

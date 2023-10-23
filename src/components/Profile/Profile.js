@@ -16,7 +16,7 @@ const downloadPDF = () => {
   // Create an anchor element to initiate the download
   const anchor = document.createElement("a");
   anchor.href = pdfFilePath;
-  anchor.download = "your-pdf-file.pdf"; // Specify the desired name for the downloaded file
+  anchor.download = "Resume.pdf"; // Specify the desired name for the downloaded file
   anchor.click();
 };
 
