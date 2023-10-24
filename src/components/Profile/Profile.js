@@ -11,7 +11,7 @@ import CustomButton from "../Button/Button";
 import GetAppIcon from "@mui/icons-material/GetApp";
 
 const downloadPDF = () => {
-  const pdfFilePath = "../../assets/pdf/ResumeF.pdf"; // Replace with the actual path to your PDF file
+  const pdfFilePath = "../../assets/pdf/Resume.pdf"; // Replace with the actual path to your PDF file
 
   // Create an anchor element to initiate the download
   const anchor = document.createElement("a");

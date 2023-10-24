@@ -1,5 +1,5 @@
 .profile {
-    background-color: white;
+    background-color:white;
     border-radius: 6px;
     width:100%;
     display:inline-block;
@@ -21,9 +21,16 @@
     margin-top: -10px;
     -webkit-clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
     clip-path: polygon(0 9%, 100% 0, 100% 94%,0% 100%);
+    display: grid;
+    place-items: center; /* This shorthand property centers both horizontally and vertically */
+    max-width: 80%;
+    height: auto;
+    
 }
 .profile_image img {
-    width:100%;
+    max-width: 70%; /* Limit the maximum width of the image */
+    max-height: 200px; /* Limit the maximum height of the image */
+    object-fit: contain; /* Maintain aspect ratio while fitting within the container */
 
 }
 /*profile information*/

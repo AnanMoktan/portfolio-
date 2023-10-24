@@ -13,7 +13,7 @@ function App() {
   return (
     <Container className="top_60">
       <Grid container gap={7}>
-        <Grid item xs={12} sm={12} md={4} lg={2.5}>
+        <Grid item xs={8} sm={4.5} md={3} lg={2.5}>
           <Profile />
         </Grid>
 
